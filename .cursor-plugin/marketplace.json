@@ -1,23 +1,18 @@
 {
-  "name": "cursor-plugin-starters",
+  "name": "chamelain",
   "owner": {
-    "name": "Your Org",
-    "email": "plugins@example.com"
+    "name": "chamelAIn",
+    "email": "support@chamelain.com"
   },
   "metadata": {
-    "description": "Starter marketplace template for Cursor plugins",
-    "version": "0.1.0"
+    "description": "chamelAIn platform client for Cursor — hosted MCP personas with OAuth connect",
+    "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "starter-simple",
-      "source": "./plugins/starter-simple",
-      "description": "Minimal plugin with rules and skills only"
-    },
-    {
-      "name": "starter-advanced",
-      "source": "./plugins/starter-advanced",
-      "description": "Full-featured plugin with rules, skills, agents, commands, hooks, and MCP"
+      "name": "chamelain",
+      "source": "./plugins/chamelain",
+      "description": "Connect Cursor to chamelAIn via OAuth MCP; browse, activate, and load personas with #<tag>"
     }
   ]
 }

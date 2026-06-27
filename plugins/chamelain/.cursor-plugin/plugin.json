@@ -1,0 +1,15 @@
+{
+  "name": "chamelain",
+  "displayName": "chamelAIn",
+  "version": "1.0.0",
+  "description": "chamelAIn platform client for Cursor — OAuth MCP connection, persona browse/activate tools, and #<tag> load workflow.",
+  "author": {
+    "name": "chamelAIn",
+    "email": "support@chamelain.com",
+    "url": "https://chamelain.com"
+  },
+  "license": "MIT",
+  "keywords": ["chamelain", "personas", "mcp", "oauth", "cursor"],
+  "logo": "assets/logo.svg",
+  "primaryColor": "#2dd4bf"
+}

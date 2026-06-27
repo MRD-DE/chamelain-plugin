@@ -1,0 +1,6 @@
+{
+  "chamelain": {
+    "url": "https://mcp.chamelain.com/mcp",
+    "transport": "http"
+  }
+}
