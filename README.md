@@ -1,34 +1,35 @@
-# Cursor plugin template
+# chamelAIn Cursor Plugin
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Official [Cursor Marketplace](https://cursor.com/marketplace) plugin for [chamelAIn](https://chamelain.com) — versioned AI personas delivered via MCP.
 
-Two starter plugins are included:
+## Repository layout
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+```
+.cursor-plugin/marketplace.json   # Marketplace manifest
+plugins/chamelain/                # chamelAIn plugin
+scripts/validate-template.mjs     # Pre-submission validator
+```
 
-## Getting started
+## Validate
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
-
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
-
-To add more plugins, see `docs/add-a-plugin.md`.
-
-## Single plugin vs multi-plugin
-
-This template defaults to **multi-plugin** (multiple plugins in one repo).
-
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+```bash
+node scripts/validate-template.mjs
+```
 
 ## Submission checklist
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+- Valid `plugin.json` and `marketplace.json`
+- Logo committed at `plugins/chamelain/assets/logo.svg`
+- Frontmatter on all rules, skills, agents, and commands
+- `node scripts/validate-template.mjs` passes
+- Production URLs swapped in `mcp.json` and skills before listing
+- Submit: [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) or kniparko@anysphere.com
+
+## Placeholder URLs
+
+Until production domains are live, the plugin uses:
+
+- MCP: `https://mcp.chamelain.com/mcp`
+- Web app: `https://app.chamelain.com`
+
+Swap these before marketplace submission.
